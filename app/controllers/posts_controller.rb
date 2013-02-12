@@ -88,5 +88,6 @@ class PostsController < ApplicationController
     end
     @posts = @posts.results
     render "index"
+    logger.info "#############################{params.inspect}"
   end
 end
