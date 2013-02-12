@@ -34,7 +34,7 @@
       <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="51" selection-start="441" selection-end="441" vertical-scroll-proportion="0.33103448">
+            <state line="18" column="43" selection-start="462" selection-end="462" vertical-scroll-proportion="0.37241378">
               <folding />
             </state>
           </provider>
@@ -468,7 +468,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="24" width="1535" height="876" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3298969" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -638,7 +638,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="51" selection-start="441" selection-end="441" vertical-scroll-proportion="0.33103448">
+        <state line="18" column="43" selection-start="462" selection-end="462" vertical-scroll-proportion="0.37241378">
           <folding />
         </state>
       </provider>
