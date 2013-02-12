@@ -17,7 +17,7 @@ class Post < ActiveRecord::Base
   def more_like
     results = Sunspot.more_like_this(self) do
       fields :title , :body
-      minimum_term_frequency 5
+      minimum_term_frequency 1
     end
   end
 
