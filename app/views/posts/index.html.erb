@@ -1,17 +1,5 @@
-<h1>Listing posts</h1>
-
-<%= form_tag search_posts_path, :method => "GET" do %>
-
-    <div class="field">
-      <%= text_field_tag :query %>
-    </div>
-    <div class="actions">
-      <%= submit_tag %>
-    </div>
-<% end %>
-
-
-<table>
+<h1>Posts</h1>
+<table class= "table">
   <tr>
     <th>Title</th>
     <th>Body</th>
@@ -22,15 +10,14 @@
 
 <% @posts.each do |post| %>
   <tr>
-    <td><%= post.title %></td>
+    <td><%= link_to post.title, post %></td>
     <td><%= post.body %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    <td><%= link_to content_tag(:i, "", class: "icon-pencil"), edit_post_path(post) %></td>
+    <td><%= link_to content_tag(:i, "", class: "icon-remove"), post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Post', new_post_path %>
+<%= link_to 'New Post', new_post_path,class: "btn btn-primary" %>

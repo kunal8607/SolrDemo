@@ -1,43 +1,53 @@
-<p id="notice"><%= notice %></p>
+<div class= "span4">
+    <div class="hero-unit">
+      <h3><%= @post.title %></h3>
+      <p><%= @post.body %></p>
+      <p>
 
-<p>
-  <b>Title:</b>
-  <%= @post.title %>
-</p>
-
-<p>
-  <b>Body:</b>
-  <%= @post.body %>
-</p>
-
-
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-
-More Like this:
-
-<% @more.results.each do |i| %>
-    <%= link_to i.title,i %>
-<% end %>
-<br>
-
-<ul>
-  <h3>Comments</h3>
-<%@post.comments.each do |i|%>
-   <li>
-     <%= i.body %>
-   </li>
-<%end%>
-</ul>
-
-<%= form_for(@post.comments.new, :url =>post_comments_path(@post) ) do |f| %>
-
-    <div class="field">
-      <%= f.label :add_comment%><br />
-      <%= f.text_field :body %>
+      </p>
     </div>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-<% end %>
+</div>
+<div class="span4">
+
+  <div class="span4">
+    <h3>Comments</h3>
+      <%@post.comments.each do |i|%>
+          <span class="row">
+            <i class=" icon-pencil"></i>
+            <%= i.body %>
+          </span>
+      <%end%>
+    <hr class="clear">
+  </div>
+  <div class="span3">
+      <%= form_for(@post.comments.new, :url =>post_comments_path(@post) ) do |f| %>
+
+          <div class="field">
+            <%= f.text_field :body, placeholder: "Comment" %>
+          </div>
+          <div class="actions">
+            <%= f.submit class: "btn" %>
+          </div>
+      <% end %>
+  </div>
+</div>
+
+<div class="span10">
+  More Like this:
+
+  <% @more.results.each do |i| %>
+      <%= link_to i.title,i %>
+  <% end %>
+
+  <hr class="clear">
+
+
+  <%= link_to 'Edit', edit_post_path(@post), class: "btn btn-primary" %>
+  <%= link_to 'Back', posts_path, class: "btn"%>
+</div>
+
+
+
+
+
 

@@ -1,25 +1,28 @@
 <%= form_for(@post) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+    <fieldset>
+      <legend>New Post</legend>
+      <% if @post.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
-      <% @post.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
+          <ul>
+          <% @post.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br />
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-    <%= f.label :body %><br />
-    <%= f.text_area :body %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+      <div class="field">
+        <%= f.label :title %>
+        <%= f.text_field :title, placeholder: "Enter the title here" %>
+      </div>
+      <div class="field">
+        <%= f.label :body %>
+        <%= f.text_area :body ,:rows => 5, placeholder: "Enter the body for post" %>
+      </div>
+      <div class="actions">
+        <%= f.submit class: "btn" %>
+      </div>
+    </fieldset>
 <% end %>
